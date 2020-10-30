@@ -1,0 +1,47 @@
+<header>
+  <div id="heading">
+    <h1>Social Media Dashboard</h1>
+    <p style="font-size: medium">
+      Total Followers {{ totalfollowers | number }}
+    </p>
+  </div>
+  <h1>Light / Dark Mode</h1>
+    <div class="toggle-container">
+        <input type="checkbox" id="switch" name="theme" /><label for="switch">Toggle</label>
+    </div>
+    <!----
+  <button id="toggle" (click)="myFunction()">
+    <i class="fa fa-toggle-on" style="font-size: 4em"></i>
+  </button>
+-->
+</header>
+
+<main>
+  <div *ngFor="let item of totalMedia" class="outercontainer">
+    <div class="outer-width" [style.background-image]="item.color"></div>
+    <div *ngIf="item" class="Container-list">
+      <span class="border"></span>
+      <div class="container-header">
+        <i class="fa {{ item.icon }}" [style.color]="item.colour"></i>
+        <span class="name">{{ item.name }}</span>
+      </div>
+      <span class="total">{{ item.total |number }}</span>
+      <span class="tag">{{ item.tag }}</span>
+
+      <div id="footer">
+        <div *ngIf="item.up">
+          <span class="today" style="font-size: small; color: green">
+            <i class="fa fa-caret-down" style="font-size: small"></i
+            >{{ item.up }} Today</span
+          >
+        </div>
+        <div *ngIf="item.down">
+          <span id="up" style="font-size: small; color: red; font-weight: bold">
+            <i class="fa fa-caret-down" style="font-size: small"></i
+            >{{ item.down }}</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,28 @@
+<main class="mainContainer">
+
+     <div *ngFor="let item of todayOverview" class="main-outer">
+
+            <li class="item">
+                 <div id="line1">
+                    <span id="heading" >{{item.heading}}</span>
+                    <span id="icon"[style.color]="getColor(item.name)"><i class="fa {{item.icon}}"></i></span>
+                 </div>
+                 <div id="line2">
+                    <span id="count">{{item.count}}</span>
+                    <div *ngIf="item.up">
+                      
+                     <span id="up" style="color:seagreen;font-weight: bold;">
+                        <i class="fa fa-caret-up" style="font-size: small;"></i>{{item.up}}</span>
+                    </div>
+                    <div *ngIf="item.down">
+                     <span id="up" style="color:red;font-weight: bold;">
+                        <i class="fa fa-caret-down" style="font-size: small;"></i>{{item.down}}</span>
+                    </div>
+
+                    
+                 </div>
+           
+            </li>
+     </div>
+
+</main>
