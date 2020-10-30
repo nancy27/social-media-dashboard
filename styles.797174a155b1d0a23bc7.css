@@ -1,0 +1,1 @@
+*{box-sizing:border-box}html{height:100%;font-family:Montserrat;display:grid;align-items:center;justify-items:center;--bg:#fcfcfc;--bg-panel:#ebebeb;--color-headings:#07f;--color-text:#333}html[data-theme=dark]{--bg:#333;--color-text:#b5b5b5}html[data-theme=light]{--bg:#fcfcfc;--color-text:#333}body{background-color:var(--bg);color:var(--color-text)}
